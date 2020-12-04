@@ -5,7 +5,7 @@ import { WeatherModule } from './weather/Weather.module';
 
 // @Module({
 //   imports:[WeatherModule,
-//      MongooseModule.forRoot(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.fhbsp.mongodb.net/Users?retryWrites=true&w=majority`)]
+//      MongooseModule.forRoot(`mongodb+srv://tarek90045:anrky90045@cluster0.fhbsp.mongodb.net/Users?retryWrites=true&w=majority`)]
 // })
 @Module({
   imports:[ WeatherModule ]
