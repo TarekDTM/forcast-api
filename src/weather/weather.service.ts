@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { HttpService, Injectable } from '@nestjs/common';
+import { HttpException, HttpService, HttpStatus, Injectable } from '@nestjs/common';
+import { response } from 'express';
 import {WeatherData} from './IweatherData'
 
 @Injectable()
@@ -24,7 +25,7 @@ export class WeatherService {
       const data : WeatherData = response.data;
         return data;
       } catch(error){
-          console.log('something went wrong')
+        throw new HttpException('Forbidden', HttpStatus.FORBIDDEN)
       }
       }
 }
